@@ -25,6 +25,17 @@
 
         <activity android:name=".SingleFromCallableActivity">
         </activity>
+
+        <activity android:name=".PublishSubjectExample">
+        </activity>
+
+        <activity android:name=".SingleJustMapExample">
+        </activity>
+
+        <activity android:name=".PublishDebounceExample">
+        </activity>
+
+
     </application>
 
 </manifest>

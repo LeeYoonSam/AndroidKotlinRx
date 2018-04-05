@@ -3,6 +3,7 @@ package com.ys.rx.example
 import android.R.array
 import android.content.Context
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RestClient(private val mContext: Context) {
@@ -65,7 +66,7 @@ class RestClient(private val mContext: Context) {
         }
 
         val cities = mContext.resources.getStringArray(R.array.city_list)
-        var toReturn: ArrayList<String>
+        var toReturn: ArrayList<String> = ArrayList()
 
         toReturn = cities.filter { city -> city.toLowerCase().startsWith(searchString.toLowerCase())}.toList<String?>() as ArrayList<String>
 

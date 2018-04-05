@@ -48,6 +48,9 @@ class MainActivity  : AppCompatActivity() {
         acts.add(ExampleActivityModel(JustExampleActivity::class.java, "Example 1: JustExampleActivity"))
         acts.add(ExampleActivityModel(FromCallableExampleActivity::class.java, "Example 2: FromCallableExampleActivity"))
         acts.add(ExampleActivityModel(SingleFromCallableActivity::class.java, "Example 3: SingleFromCallableActivity"))
+        acts.add(ExampleActivityModel(PublishSubjectExample::class.java, "Example 4: PublishSubjectExample"))
+        acts.add(ExampleActivityModel(SingleJustMapExample::class.java, "Example 5: SingleJustMapExample"))
+        acts.add(ExampleActivityModel(PublishDebounceExample::class.java, "Example 6: PublishDebounceExample"))
 
         return acts
     }

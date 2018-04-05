@@ -48,6 +48,37 @@ class SingleFromCallableActivity: AppCompatActivity() {
                         { it -> displayTvShows(it as ArrayList<String>) },
                         { displayErrorMessage() })
 
+        /**
+         * 원래 코드
+         *
+         mSearchResultsSubject = PublishSubject.create();
+        mTextWatchSubscription = mSearchResultsSubject
+        .debounce(400, TimeUnit.MILLISECONDS)
+        .observeOn(Schedulers.io())
+        .map(new Func1<String, List<String>>() {
+        @Override
+        public List<String> call(String s) {
+        return mRestClient.searchForCity(s);
+        }
+        })
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(new Observer<List<String>>() {
+        @Override
+        public void onCompleted() {
+
+        }
+
+        @Override
+        public void onError(Throwable e) {
+
+        }
+
+        @Override
+        public void onNext(List<String> cities) {
+        handleSearchResults(cities);
+        }
+        });
+         */
     }
 
     fun displayTvShows(tvShows: ArrayList<String>) {
